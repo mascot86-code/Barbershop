@@ -5,6 +5,7 @@
     --white: #FFFFFF;
     --gray: #F9F6F3;
     --light-gray: gray;
+    --brown: brown;
 }
 
 body {
@@ -62,19 +63,9 @@ body {
 }
 
 .menu-links-items li a:hover {
-    color: var(--gray);
-}
-
-.menu-links-items li a:hover::after {
-    content: '';
-    width: 10px;
-    height: 10px;
-    background-color: var(--white);
-    position: absolute;
-    top: 5px;
-    margin-left: 15px;
-    border-radius: 1px;
-    transform: rotate(45deg);
+    color: var(--brown);
+    transition-duration: 0.7s;
+    cursor: pointer;
 }
 
 
@@ -91,8 +82,9 @@ body {
 }
 
 .login a:hover {
-    color: var(--gray);
+    color: var(--brown);
     transition-duration: 0.7s;
+    cursor: pointer;
 }
 
 .login img {
@@ -214,6 +206,12 @@ body {
     border-radius: 2px;
 }
 
+.btn:hover {
+    background-color: var(--brown);
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+
 .photos img {
     width: 315px;
     height: auto;
@@ -222,6 +220,14 @@ body {
     -webkit-box-shadow: -1px 4px 8px 3px rgba(34, 60, 80, 0.07);
     -moz-box-shadow: -1px 4px 8px 3px rgba(34, 60, 80, 0.07);
     box-shadow: -1px 4px 8px 3px rgba(34, 60, 80, 0.07);
+
+}
+
+
+.photos img:hover {
+    cursor: pointer;
+    transition-duration: 0.7s;
+    filter: sepia(50%);
 }
 
 .gallery-btn {
@@ -249,6 +255,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    font-weight: 600;
 }
 
 .working-time {
@@ -275,6 +282,12 @@ body {
     border-radius: 2px;
     display: flex;
     justify-content: space-between;
+}
+
+.form-inputs:hover {
+    border-color: var(--brown);
+    transition-duration: 0.7s;
+    cursor: pointer;
 }
 
 .input-text {
@@ -309,6 +322,12 @@ body {
     font-size: 14px;
     border: none;
     border-radius: 2px;
+}
+
+.booking-btn:hover {
+    background-color: var(--brown);
+    transition-duration: 0.7s;
+    cursor: pointer;
 }
 
 i {
@@ -354,6 +373,12 @@ i {
     margin-left: 10px;
 }
 
+.icons:hover {
+    background-color: var(--brown);
+    transition-duration: 0.7s;
+    cursor: pointer;
+}
+
 .vk {
     background: var(--black) url('../img/VK.png') no-repeat center;
     background-size: 45%;
@@ -383,376 +408,4 @@ i {
     font-weight: bold;
     font-size: 14px;
     line-height: 24px;
-}
-
-@media (min-width: 767px) {
-    .header {
-        padding: 26px 0;
-        background-color: var(--black);
-        position: sticky;
-        top: 0;
-        z-index: 120;
-        -webkit-box-shadow: 1px 6px 6px -1px rgba(34, 60, 80, 0.2);
-        -moz-box-shadow: 1px 6px 6px -1px rgba(34, 60, 80, 0.2);
-        box-shadow: 1px 6px 6px -1px rgba(34, 60, 80, 0.2);
-    }
-
-
-    .menu {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .menu-links-items {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .menu-links-items li {
-        list-style-type: none;
-        margin-left: 40px;
-    }
-
-    .menu-links-items li:first-child {
-        margin-left: 0;
-    }
-
-    .menu-links-items li a {
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 20px;
-        color:var(--white);
-        text-transform: uppercase;
-    }
-
-    .menu-links-items li a:hover {
-        color: var(--gray);
-        transition-duration: 0.7s;
-    }
-
-    .login {
-        display: flex;
-        align-items: center;
-    }
-
-    .login a {
-        font-weight: bold;
-        text-decoration: none;
-        color: var(--white);
-        text-transform: uppercase;
-    }
-
-    .login a:hover {
-        color: var(--gray);
-        transition-duration: 0.7s;
-    }
-
-    .login img {
-        padding-right: 12px;
-    }
-
-    .intro {
-        background: url('../img/background.jpg') no-repeat;
-    }
-
-    .logo img{
-        display: block;
-        margin: 0 auto;
-        padding: 60px 0;
-        width: 40%;
-        height: auto;
-    }
-
-    .title {
-        font-size: 23px;
-        text-align: left;
-        color: var(--black);
-    }
-
-    .features {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 171px;
-    }
-
-    .features-item {
-        width: 300px;
-        height: 72px;
-        text-align: center;
-    }
-
-    .rectangle {
-        width: 25px;
-        height: 25px;
-        background-color: var(--white);
-        transform: rotate(45deg);
-        display: block;
-        margin: 0 auto 25px;
-        border-radius: 3px;
-    }
-
-    .feature-title {
-        font-size: 30px;
-        line-height: 42px;
-        margin-bottom: 5px;
-    }
-
-    .feature-text {
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 24px;
-    }
-
-    .block-news {
-        width: 920px;
-        height: 419px;
-        background-color: var(--gray);
-        opacity: 0.93;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 30px 48px;
-        margin: 0 auto 40px;
-        border-radius: 4px;
-    }
-
-    .line img {
-        opacity: 0.5;
-    }
-
-    .news-text {
-        color: var(--black);
-        width: 330px;
-        font-weight: bold;
-        font-size: 12px;
-        line-height: 24px;
-    }
-
-    .news-content {
-        width: 300px;
-    }
-
-    .photos {
-        width: 321px;
-    }
-
-    .news-date {
-        color: var(--black);
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 24px;
-        margin-bottom: 25px;
-    }
-
-    .btn {
-        width: 144px;
-        height: 40px;
-        background-color: var(--black);
-        color: var(--white);
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 24px;
-        border: none;
-        border-radius: 2px;
-    }
-
-    .photos img {
-        width: 315px;
-        height: auto;
-        border: 5px solid var(--gray);
-        margin-bottom: 30px;
-        -webkit-box-shadow: -1px 4px 8px 3px rgba(34, 60, 80, 0.07);
-        -moz-box-shadow: -1px 4px 8px 3px rgba(34, 60, 80, 0.07);
-        box-shadow: -1px 4px 8px 3px rgba(34, 60, 80, 0.07);
-    }
-
-    .gallery-btn {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        width: 320px;
-    }
-
-    .btn:hover {
-        background-color: brown;
-        cursor: pointer;
-        transition-duration: 0.7s;
-    }
-
-    .block-contacts {
-        width: 920px;
-        height: 419px;
-        background-color: var(--gray);
-        opacity: 0.93;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding: 30px 48px;
-        border-radius: 4px;
-    }
-
-    .arrows {
-        color: var(--black);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    .working-time {
-        margin-top: 20px;
-    }
-
-    .contact {
-        width: 310px;
-        margin-top: 22px;
-    }
-
-    .form {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .form-inputs {
-        width: 136px;
-        height: 43px;
-        border: 3px solid var(--black);
-        margin-right: 10px;
-        margin-bottom: 10px;
-        border-radius: 2px;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .form-inputs:hover {
-        border-color: brown;
-        cursor: pointer;
-        transition-duration: 0.7s;
-    }
-
-    .input-text {
-        display: flex;
-        padding-top: 10px;
-        padding-left: 10px;
-        justify-content: flex-start;
-        font-weight: bold;
-        font-size: 13px;
-        line-height: 24px;
-        color: var(--light-gray);
-        align-content: center;
-        opacity: 0.6;
-    }
-
-    .label-text {
-        color: var(--black);
-        font-size: 14px;
-        line-height: 24px;
-        padding-left: 10px;
-        margin-bottom: 0px;
-        margin-top: 0;
-    }
-
-    .booking-btn {
-        margin-top: 20px;
-        width: 295px;
-        height: 43px;
-        background-color: var(--black);
-        color: var(--white);
-        font-weight: bold;
-        font-size: 14px;
-        border: none;
-        border-radius: 2px;
-    }
-
-    .booking-btn:hover {
-        background-color: brown;
-        cursor: pointer;
-        transition-duration: 0.7s;
-    }
-
-    i {
-        padding-right: 10px;
-    }
-
-    .footer {
-        margin-top: 65px;
-        width: 100%;
-        background-color: #1A1A1A;
-    }
-
-    .footer-inner {
-        padding: 59px 0 38px 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-
-    .footer-info {
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 24px;
-    }
-
-    .social-icons {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 12px;
-        align-items: center;
-    }
-
-    .friendly {
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 24px;
-        text-align: center;
-    }
-
-    .icons {
-        width: 48px;
-        height: 48px;
-        margin-left: 10px;
-    }
-
-    .icons:hover {
-        background-color: brown;
-        cursor: pointer;
-        transition-duration: 0.7s;
-    }
-
-    .vk {
-        background: var(--black) url('../img/VK.png') no-repeat center;
-        background-size: 45%;
-    }
-
-    .fb {
-        background: var(--black) url('../img/Facebook.png') no-repeat center;
-        background-size: 20%;
-    }
-
-    .inst {
-        background: var(--black) url('../img/Instagram.png') no-repeat center;
-        background-size: 40%;
-    }
-
-    .created-by {
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 24px;
-        text-align: center;
-    }
-
-    .studio {
-        background-color: var(--black);
-        margin-top: 12px;
-        padding: 10px 30px 9px 30px;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 24px;
-    }
 }
